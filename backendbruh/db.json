@@ -1,0 +1,62 @@
+{
+    "warnings": [
+      {
+        "id": 1,
+        "title": "Giả mạo tên miền, website",
+        "content": "Bọn lừa đảo mua 1 tên miền gần giống (chỉ lệch 1 vài ký tự) sau đó gắn vào web fake có giao diện giống hệt để lừa đảo."
+      },
+      {
+        "id": 2,
+        "title": "Lừa đảo qua email",
+        "content": "Bọn lừa đảo gửi email giả mạo ngân hàng để đánh cắp thông tin của bạn."
+      }
+    ],
+    "reporters": [
+      {
+        "id": 1,
+        "name": "Bùi Hoàng Duy",
+        "phonenumber": "0987654321",
+        "status": "Nạn nhân"
+      },
+      {
+        "id": 2,
+        "name": "Nguyễn Quốc Cường",
+        "phonenumber": "0345643544",
+        "status": "Đăng hộ"
+      }
+    ],
+    "scammers": [
+      {
+        "id": 1,
+        "reporter": {
+          "id": 1,
+          "name": "Bùi Hoàng Duy",
+          "phonenumber": "0987654321",
+          "status": "Nạn nhân"
+        },
+        "date": "02/12/2024",
+        "name": "Nguyễn Huy Tân",
+        "phonenumber": "0123456789",
+        "banknumber": "9708062705",
+        "bank": "VCB",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+        "images": ["images/imagescammer.png", "images/image1.png", "images/image2.png", "images/image3.png", "images/image4.png", "images/image5.png"]
+      },
+      {
+        "id": 2,
+        "reporter": {
+          "id": 2,
+          "name": "Nguyễn Quốc Cường",
+          "phonenumber": "0345643544",
+          "status": "Đăng hộ" 
+        },
+        "date": "05/12/2024",
+        "name": "Lê Thanh Nhật",
+        "phonenumber": "0987654321",
+        "banknumber": "9708062705",
+        "bank": "Vietcombank",
+        "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet",
+        "images": [ "images/image1.png","images/imagescammer.png", "images/image2.png", "images/image3.png", "images/image4.png", "images/image5.png"]
+      }
+    ]
+  }
