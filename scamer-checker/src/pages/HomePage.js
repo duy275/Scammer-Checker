@@ -117,8 +117,7 @@ const HomePage = () => {
       <section className="content">
         <h1 className="content__heading">KIỂM TRA & TỐ CÁO Scammer</h1>
         <p className="content__desc">
-          Website lưu trữ dữ liệu lừa đảo trên mxh mà không chịu bất kỳ hạn chế
-          search của một thuật toán nào trên Facebook
+          Website lưu trữ dữ liệu lừa đảo trên mạng xã hội
         </p>
         <form className="form-search">
           <input
@@ -128,16 +127,15 @@ const HomePage = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           ></input>
-          {/* <button className="btn form-search__btn" type="submit">
-            Tìm Kiếm
-          </button> */}
         </form>
       </section>
       <div className="container">
         <section className="alert-scam">
           <div className="alert-scam__header">
             <h2 className="alert-scam__title title">Hôm nay {currentDate}</h2>
-            <p className="alert-scam__desc">CÓ {scammers.length} CẢNH BÁO</p>
+            <p className="alert-scam__desc">
+              CÓ {searchedScammers.length} CẢNH BÁO
+            </p>
           </div>
           {searchedScammers && searchedScammers.length > 0 ? (
             <ul className="scammer__list">

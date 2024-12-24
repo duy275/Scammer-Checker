@@ -97,10 +97,11 @@ const Profile = () => {
 
   useEffect(() => {
     fetchScammer();
+    console.log(filteredReports);
   }, []);
 
   const filteredReports = scammers.filter(
-    (scammer) => scammer.reporter_id === userId
+    (scammer) => scammer.reporter_id == userId
   );
 
   const openImageModal = (image) => {
@@ -124,6 +125,25 @@ const Profile = () => {
     setScammerIsOpen(false);
     document.body.classList.remove("no-scroll");
   };
+
+  const showStatus = (s_status) => {
+    if (s_status === "0") {
+      return (
+        <span style={{ color: "orange", fontWeight: "bold" }}>
+          Chưa xét duyệt
+        </span>
+      );
+    }
+    if (s_status === "1") {
+      return (
+        <span style={{ color: "green", fontWeight: "bold" }}>Đã xét duyệt</span>
+      );
+    }
+    if (s_status === "2") {
+      return <span style={{ color: "red", fontWeight: "bold" }}>Từ chối</span>;
+    }
+  };
+
   //hết hiển thị danh sách tố cáo
 
   return (
@@ -234,7 +254,7 @@ const Profile = () => {
                 alt="No results found"
               />
               <p className="scammer_empty-title">
-                Hôm nay chưa có cảnh báo nào...
+                Bạn chưa gửi cảnh báo nào...
               </p>
             </div>
           )}
@@ -264,6 +284,12 @@ const Profile = () => {
                         {selectedScammer.date}
                       </p>
                     </div>
+                  </div>
+                  <div className="modal__detail">
+                    <span className="modal__detail-title">Trạng thái</span>
+                    <span className="modal__detail-text">
+                      {showStatus(selectedScammer.s_status)}
+                    </span>
                   </div>
                   <div className="modal__detail">
                     <span className="modal__detail-title">Số điện thoại</span>

@@ -11,7 +11,7 @@
 
 .modal__body-custom {
     padding: 8px 16px;
-    height: calc(700px - 54px);
+    height: auto;
     overflow: hidden;
 }
 

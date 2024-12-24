@@ -139,6 +139,24 @@ const Warning = () => {
     (scammer) => scammer.reporter_id === userId
   );
 
+  const showStatus = (s_status) => {
+    if (s_status === "0") {
+      return (
+        <span style={{ color: "orange", fontWeight: "bold" }}>
+          Chưa xét duyệt
+        </span>
+      );
+    }
+    if (s_status === "1") {
+      return (
+        <span style={{ color: "green", fontWeight: "bold" }}>Đã xét duyệt</span>
+      );
+    }
+    if (s_status === "2") {
+      return <span style={{ color: "red", fontWeight: "bold" }}>Từ chối</span>;
+    }
+  };
+
   return (
     <>
       <section className="dashboard">
@@ -241,6 +259,12 @@ const Warning = () => {
                             #{report.id} - Tố vào ngày {report.date}
                           </p>
                         </div>
+                      </div>
+                      <div className="modal__detail">
+                        <span className="modal__detail-title">Trạng thái</span>
+                        <span className="modal__detail-text">
+                          {showStatus(report.s_status)}
+                        </span>
                       </div>
                       <div className="modal__detail">
                         <span className="modal__detail-title">
